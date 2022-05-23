@@ -1,9 +1,9 @@
-import express, {Express, Request, Response, Router} from "express";
-import multer from "multer";
+import express, { Express, Request, Response, Router } from "express";
+import multer, { Multer } from "multer";
 
 const app: Express = express();
 const router: Router = express.Router();
-const upload = multer({ dest: __dirname + '/public/images' });
+const upload: Multer = multer({ dest: __dirname + '/public/images' });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
